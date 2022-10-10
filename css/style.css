@@ -1,0 +1,96 @@
+/* Skip to main content function for accessibility */
+.skip a {
+    background: #add8e6;
+    height: 30px;
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+
+.skip a:focus {
+    transform: translateY(0%);
+}
+
+/* navigation links*/
+li a {
+    float: left;
+    margin: 12px 36px 12px 36px;
+    position: relative;
+    padding: 40px;
+}
+
+.nav a:link {
+    font-family: 'Helvetica Neue';
+    font-size: 24px;
+    color:rgb(10, 85, 206);
+    text-decoration: none;
+    padding: 36px;
+    /* Animation */
+    transition: transform .2s; 
+    overflow: hidden;
+}
+
+.nav a:hover {
+    /* enlarge link while hovering */
+    transform: scale(1.2);
+  }
+
+
+.nav.active{
+    transform: scale(1.2); 
+}
+
+.nav a:visited { 
+    text-decoration: none; 
+    color: rgb(10, 85, 206);
+}
+
+/* title */
+.title {
+    font-size: 64px;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', 'Open Sans';
+    color: rgb(0, 0, 73);
+    padding: 24px;
+}
+
+.gallery {
+    padding: 24px;
+}
+
+figure.gallery {
+    padding: 4px;
+    margin: 24px;
+    border: 5px solid rgb(255, 255, 255);
+    float: left;
+    width: 500px;
+  }
+
+figure {
+    margin: 24px;
+    border: 5px solid rgb(255, 255, 255);
+    padding: 20px;
+}
+
+img {
+    width: 500px;
+    height: auto;
+}
+
+figcaption {
+    font-family: 'Helvetica Neue';
+    font-size: 16px;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+p {
+    padding: 24px;
+    margin: 20px;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    float: left;
+}
