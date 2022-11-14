@@ -1,48 +1,67 @@
 /* Skip to main content function for accessibility */
-.skip a {
+.skip {
     background: #add8e6;
     height: 30px;
     left: 50%;
     padding: 8px;
     position: absolute;
-    transform: translateY(-100%);
-    transition: transform 0.3s;
+    top: -46px;
+    /* transform: translateY(-100%); */
+    transition: transform 0.3s; 
 }
 
-.skip a:focus {
-    transform: translateY(0%);
+.skip:focus {
+    top: 0px;
+    /* transform: translateY(0%); */
+}
+
+header{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 /* navigation links*/
-li a {
-    float: left;
-    margin: 12px 36px 12px 36px;
-    position: relative;
-    padding: 40px;
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
 }
 
-.nav a:link {
-    font-family: 'Helvetica Neue';
+.nav_item{
+    padding: 16px;
+    text-align: center;
+}
+
+.nav_item a{
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 24px;
     color:rgb(10, 85, 206);
     text-decoration: none;
-    padding: 36px;
+    padding: 20px 0;
+    margin: 0 20px;
+    transition: 0.3s ease;
     /* Animation */
-    transition: transform .2s; 
-    overflow: hidden;
+    /* transition: transform 0.2s; */
 }
 
-.nav a:hover {
+.nav_item a:hover {
     /* enlarge link while hovering */
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
+    /* font-size: 30px; */
+    border-bottom: 4px solid rgb(10, 85, 206);
+    padding: 6px 0; 
   }
 
 
-.nav.active{
-    transform: scale(1.2); 
+.nav_item a.active{
+    /* transform: scale(1.2); */
+    /* font-size: 30px; */
+    border-bottom: 4px solid rgb(10, 85, 206);
+    padding: 6px 0;
 }
 
-.nav a:visited { 
+.nav_item a:visited { 
     text-decoration: none; 
     color: rgb(10, 85, 206);
 }
@@ -64,8 +83,6 @@ figure.gallery {
     padding: 4px;
     margin: 24px;
     border: 5px solid rgb(255, 255, 255);
-    float: left;
-    width: 500px;
   }
 
 figure {
@@ -74,13 +91,8 @@ figure {
     padding: 20px;
 }
 
-img {
-    width: 500px;
-    height: auto;
-}
-
 img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 figcaption {
@@ -91,10 +103,212 @@ figcaption {
     text-align: center;
 }
 
+h1.title{
+    padding-top: 200px;
+    padding-bottom: 80px;
+    padding-left: 80px;
+    color: white;
+    background-image: url("../images/gradient_bg.png");
+    background-size: cover;
+    background-color: #0000B9;
+}
+
 p {
     padding: 24px;
     margin: 20px;
-    font-family: 'Helvetica Neue';
+    font-family: 'Open Sans', sans-serif;
+    line-height: 36px;
     font-size: 20px;
-    float: left;
+}
+
+img{
+    max-width: 500px;
+    height: auto;
+}
+
+/* main page image animation */
+#company_logo{
+    animation-name: logoChange;
+    animation-duration: 3s;
+}
+
+@keyframes logoChange{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@media (prefers-reduced-motion) {
+    header img{
+      animation: none;
+    }
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-row-gap: 30px;
+}
+
+header{
+    grid-column: 1 / -1;
+}
+
+main{
+    grid-column: 2 / 3;
+    justify-content: center;
+}
+
+footer{
+    grid-column: 1 / -1;
+    justify-content: center;
+}
+
+footer p{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+}
+
+aside {
+    grid-column: 2 / 3;
+    width: 40%;
+    padding-left: 0.5rem;
+    margin-left: 20px;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside p {
+    margin: 12px;
+    padding: 12px;
+}
+
+aside p strong{
+    font-weight: 600;
+}
+
+/* gallery flexbox */
+.flex_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.flex_container img{
+   max-width: 500px;
+   height: auto;
+}
+
+@media screen and (min-width: 700px) {
+    header{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    /* navigation links*/
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        padding: 60px 12px 12px 12px;
+    }
+
+    .nav_item{
+        padding: 16px;
+        text-align: left;
+    }
+
+    .nav_item a{
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 24px;
+        color:rgb(10, 85, 206);
+        text-decoration: none;
+        padding: 20px 0;
+        margin: 0 20px;
+        transition: 0.3s ease;
+        /* Animation */
+        /* transition: transform 0.2s; */
+    }
+
+    .nav_item a:hover {
+        /* enlarge link while hovering */
+        /* transform: scale(1.2); */
+        /* font-size: 30px; */
+        border-bottom: 4px solid rgb(10, 85, 206);
+        padding: 6px 0; 
+    }
+
+
+    .nav_item a.active{
+        /* transform: scale(1.2); */
+        /* font-size: 30px; */
+        border-bottom: 4px solid rgb(10, 85, 206);
+        padding: 6px 0;
+    }
+
+    .nav_item a:visited { 
+        text-decoration: none; 
+        color: rgb(10, 85, 206);
+    }
+    
+    /* grid */
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 5fr 5fr 1fr;
+        grid-row-gap: 30px;
+    }
+
+    header{
+        grid-column: 1 / -1;
+    }
+
+    main{
+        grid-column: 2 / 4;
+        justify-content: center;
+    }
+
+    footer{
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+    footer p{
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    aside {
+        grid-column: 3 / 4;
+        width: 40%;
+        padding-left: 0.5rem;
+        margin-left: 20px;
+        float: right;
+        box-shadow: inset 5px 0 5px -5px #29627e;
+        font-style: italic;
+        color: #29627e;
+    }
+
+    /* gallery flexbox */
+    .flex_container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flex_container img{
+        height: 100%;
+    }
+
+    p.gintro {
+        max-width: 800px;
+        text-align: left;
+    }
+
 }

@@ -5,18 +5,31 @@
 	<meta charset="utf-8">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
+	<!-- Google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKZWW8E5F"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'G-HRKZWW8E5F');
+	</script>
 </head>
 
 <body>
-	<div class="skip"><a href="#main">Skip to Main Content</a></div>
+	<a class="skip" href="#main">Skip to Main Content</a>
 	<h1 class='title'>Working with Agora</h1>
 	<header>
 		<nav>
-			<ul>
-				<li class="nav"><a href="pm_tool.html">Project1</a></li>
-				<li class="nav"><a href="data_monitor.html">Project2</a></li>
-				<li class="nav"><a href="eval_system.html">Project3</a></li>
-				<li class="nav"><a href="gallery.html">Vector Graphics</a></li>
+			<ul class="nav_links">
+				<li class="nav_item"><a href="pm_tool.html">Project1</a></li>
+				<li class="nav_item"><a href="data_monitor.html">Project2</a></li>
+				<li class="nav_item"><a href="eval_system.html">Project3</a></li>
+				<li class="nav_item"><a href="gallery.html">Vector Graphics</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -34,13 +47,19 @@
             I learned from each project and rapidly grew as a UI/UX designer. 
 		</p>
 		<figure>
-			<img src="images/agora.png" alt="Agora logo">
+			<img id="company_logo" src="images/agora.png" alt="Agora logo">
 			<figcaption>Agora</figcaption>
 		</figure>
+		<form action="https://formspree.io/f/xayklabw" method="POST">
+  		<label>Your email:<input type="email" name="email"></label>
+  		<label>Your message:<textarea name="message"></textarea></label>
+  		<!-- your other form fields go here -->
+  		<button type="submit">Send</button>
+		</form>
 	</main>
 
 	<footer>
-        
+		<p>@LHY</p>
 	</footer>
 </body>
 </html>

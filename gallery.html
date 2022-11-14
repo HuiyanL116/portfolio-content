@@ -5,17 +5,30 @@
     <title></title>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRKZWW8E5F"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'G-HRKZWW8E5F');
+	</script>
 </head>
 
 <body>
+	<a class="skip" href="#main">Skip to Main Content</a>
 	<header>
 		<nav>
-			<ul>
-				<li class="nav"><a href="index.html">Home</a></li>
-				<li class="nav"><a href="pm_tool.html">Project1</a></li>
-				<li class="nav"><a href="data_monitor.html">Project2</a></li>
-				<li class="nav"><a href="eval_system.html">Project3</a></li>
-				<li class="nav active"><a href="gallery.html">Vector Graphics</a></li>
+			<ul class="nav_links">
+				<li class="nav_item"><a href="index.html">Home</a></li>
+				<li class="nav_item"><a href="pm_tool.html">Project1</a></li>
+				<li class="nav_item"><a href="data_monitor.html">Project2</a></li>
+				<li class="nav_item"><a href="eval_system.html">Project3</a></li>
+				<li class="nav_item"><a class="active" href="gallery.html">Vector Graphics</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -25,6 +38,7 @@
 			Within my work, I also designed multiple vector graphics and placeholders 
             for various products of the company. Here are some selections.
 		</p>
+		<div class="flex_container">
 		<figure class="gallery">
 			<img src="images/gallery/nonacess.png" alt="Vector graphic of nonaccess">
 			<figcaption>The "access not granted" placeholder</figcaption>
@@ -61,6 +75,7 @@
 	</main>
 
 	<footer>
+		<p>@LHY</p>
 	</footer>
 </body>
 </html>
