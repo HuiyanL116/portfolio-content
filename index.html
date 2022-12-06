@@ -3,6 +3,7 @@
 <head>
 	<title>Portfolio Content</title>
 	<meta charset="utf-8">
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
 	<!-- Google font -->
@@ -36,8 +37,14 @@
 	</header>
 
 	<main id="main">
-		<i class="fa-solid fa-star"></i>
-		
+		<i class="fa-solid fa-music"></i>
+
+		<audio id="music">
+			<source src="music/piano.mp3" type="audio/mpeg">
+		</audio>
+		<button id="playBtn" onclick="play()">Play</button>
+		<button id="stopBtn" onclick="stop()">Stop</button>
+
 		<p class="hintro">
 			I was honored to work with Agora.io from February 2022 to August 2022. Agora.io is a PaaS company 
             that designs real-time engagement APIs. I was recruited as a product designer for the data product 
@@ -53,14 +60,18 @@
 			<img id="company_logo" src="images/agora.png" alt="Agora logo">
 			<figcaption>Agora</figcaption>
 		</figure>
+
+		<p id="contact">Please leave your contact information if you are interested in reaching out to me:</p>
 		<form action="https://formspree.io/f/xayklabw" method="POST">
-  		<label>Your email:<input type="email" name="email"></label>
+  		<label>Your email:<input type="text" name="email"></label>
+		<label>Your name:<input type="text" name="name"></label>
   		<label>Your message:<textarea name="message"></textarea></label>
   		<!-- your other form fields go here -->
   		<button type="submit">Send</button>
 		</form>
-	</main>
 
+	</main>
+	<script type="text/javascript" src="js/music.js"></script>
 	<footer>
 		<p>@LHY</p>
 	</footer>
